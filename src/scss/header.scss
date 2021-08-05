@@ -1,0 +1,168 @@
+.header {
+  height: 100px;
+  padding: 30px 15px;
+  position: relative;
+  background-color: $background-color-white;
+
+  @include for-medium-down {
+    padding: 30px 20px;
+  }
+
+  &__container {
+    margin: 0 auto;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    height: 35px;
+    margin-right: 7px;
+
+    @include for-medium-down {
+      height: 43px;
+      margin-right: 20px;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__menu-icon {
+    height: 30px;
+    width: 30px;
+    margin-left: 7px;
+    align-self: center;
+    &:hover {
+      cursor: pointer;
+    }
+
+    @include for-medium-down {
+      margin-left: 10px;
+    }
+
+    @include for-medium {
+      margin-left: 22px;
+    }
+
+    @include for-large {
+      display: none;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-color: $background-color-black;
+    padding: 40px 0;
+    overflow: auto;
+
+    &_hidden {
+      top: auto;
+      bottom: 100px;
+    }
+
+    &_shown {
+      position: fixed;
+      top: 100px;
+      bottom: auto;
+    }
+
+    @include for-large {
+      min-height: 100%;
+      padding: 0;
+      display: block;
+      background-color: transparent;
+      width: auto;
+      position: static;
+    }
+    margin-right: 20px;
+  }
+  &__actions {
+    display: flex;
+
+    @include for-large {
+      width: 280px;
+    }
+  }
+  &__btn {
+    &:first-child {
+      margin-right: 7px;
+      @include for-medium-down {
+        margin-right: 10px;
+      }
+
+      @include for-medium {
+        margin-right: 22px;
+      }
+    }
+
+    span {
+      display: none;
+
+      @include for-medium {
+        display: inline;
+      }
+    }
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include for-large {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    margin-bottom: 40px;
+
+    @include for-large {
+      margin-right: 45px;
+      margin-bottom: 0;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    font-size: 40px;
+    font-weight: bold;
+    color: $color-green;
+
+    @include for-large {
+      color: $color-black;
+      font-size: 14px;
+    }
+
+    span {
+      text-transform: capitalize;
+    }
+  }
+
+  &__arrow {
+    display: none;
+
+    @include for-large {
+      display: inline-block;
+      height: 8px;
+      width: 8px;
+      margin-left: 8px;
+    }
+  }
+}

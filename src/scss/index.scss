@@ -1,0 +1,48 @@
+@import './reset.scss';
+@import './fonts.scss';
+@import './variables.scss';
+@import './breakpoints.scss';
+@import './common.scss';
+@import './header.scss';
+@import './advertising.scss';
+@import './agreement.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+  color: $color-black;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+  padding: 20px 15px;
+
+  @include for-medium {
+    padding: 20px 50px 0;
+  }
+
+  @include for-large {
+    padding-top: 100px;
+  }
+
+  &__container {
+    @include for-medium {
+      max-width: 550px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+}

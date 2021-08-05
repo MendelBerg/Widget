@@ -1,0 +1,63 @@
+.agreement {
+  height: 600px;
+  position: relative;
+
+  @include for-large {
+    height: 680px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    @include for-medium-down {
+      top: 25px;
+      right: 25px;
+    }
+    opacity: 0.25;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    height: 300px;
+    overflow: auto;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    mask-image: gradient(linear, left 60%, left bottom, from(black), to(rgba(0, 0, 0, 0.1)));
+    -webkit-mask-image: -webkit-gradient(
+      linear,
+      left 60%,
+      left bottom,
+      from(black),
+      to(rgba(0, 0, 0, 0.1))
+    );
+
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      height: 65px;
+      background: $color-green;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__btn {
+    padding: 22px;
+  }
+
+  &__icon {
+    height: 15px;
+  }
+}
