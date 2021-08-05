@@ -1,6 +1,6 @@
 # A widget with confirming
 
-### https://goofy-brahmagupta-6be650.netlify.app/
+### https://nifty-jennings-4e8193.netlify.app/
 
 A widget with a choice of user type and a form for confirming the user agreement.
 
